@@ -6,5 +6,7 @@ app.config.from_object('config')
 db = SQLAlchemy(app)
 
 
+from app.models import mainpage
 from app.routes import index
 
+from app.routes import mainpages
