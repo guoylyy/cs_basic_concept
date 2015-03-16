@@ -22,19 +22,7 @@ gdb ./MyJavaProg
 ###2. 查看源代码
 >Workaround的解决方案如下：
 >1）先List类的构造函数，这样可以找到源文件。
->2）使用源文件的行号进行break。
-```
-l(ist) MyJavaProg::main
-或者
-l MyJavaProg.main
-```
-###3. 设置断点
-```
-break line-number
-或
-break MyJavaProg.main
-或
-break MyJavaProg::main
+>2）使用avaProg::main
 或
 break line-number if variable==50 <--条件断点
 ```
@@ -68,4 +56,8 @@ SIGXCPU       No        No      Yes             CPU time limit exceeded
 ```
 当然，你并不用每次都需要设置这两个命令，你可以设置$HOME目录下的.gdbinit文件来把这两个命令作为GDB的初始化选项。
 ###8. 未解决的问题
-1. 如何答应String
+1. 如何打印String
+###9. 参考：
+1. [用GDB 调试Java程序](http://blog.csdn.net/haoel/article/details/2289305)
+2. [用GDB调试程序](http://blog.csdn.net/haoel/archive/2003/07/02/2879.aspx)
+3. [Debugging with GDB](http://www.delorie.com/gnu/docs/gdb/gdb_19.html)
